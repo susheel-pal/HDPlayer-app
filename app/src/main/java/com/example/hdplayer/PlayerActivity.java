@@ -5,10 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.PorterDuff;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuInflater;
@@ -63,7 +69,7 @@ public class PlayerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);
 
-        getSupportActionBar().setTitle("sp creation player");
+        getSupportActionBar().setTitle("HD Player");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -267,4 +273,5 @@ public class PlayerActivity extends AppCompatActivity {
         time+=sec;
         return time;
     }
+
 }
